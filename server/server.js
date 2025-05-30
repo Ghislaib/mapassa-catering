@@ -4,7 +4,10 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 const app = express();
-app.use(cors());
+// ✅ CORS setup — allow your Vercel frontend
+app.use(cors({
+  origin: 'https://www.mapassa.com',
+}));
 app.use(express.json());
 
 app.post('/api/quote', async (req, res) => {

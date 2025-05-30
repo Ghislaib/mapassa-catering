@@ -67,11 +67,14 @@ export default function ContactSection() {
     setStatus('loading');
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/quote`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/api/quote`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(form),
+        }
+      );
       if (!res.ok) throw new Error('Network error');
       setStatus('success');
       setForm({

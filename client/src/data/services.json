@@ -1,0 +1,23 @@
+[
+  {
+    "id": "wedding",
+    "title": "Weddings",
+    "desc": "Elegant plated dinners or buffet style for up to 300 guests.",
+    "icon": "💍",
+    "img": "/img/rice-plate.png"
+  },
+  {
+    "id": "corporate",
+    "title": "Corporate Events",
+    "desc": "Timely drop-off or full-service for meetings, conferences, and galas.",
+    "icon": "🏢",
+    "img": "/img/corporate.jpg"
+  },
+  {
+    "id": "private",
+    "title": "Private Parties",
+    "desc": "Personalized menus for birthdays, anniversaries, and more.",
+    "icon": "🎉",
+    "img": "/img/puff-puffs.png"
+  }
+]

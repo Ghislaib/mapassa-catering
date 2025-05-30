@@ -56,7 +56,7 @@ npm install
 npm run dev
 ```
 
-Frontend runs on: [http://localhost:5173](http://localhost:5173)
+Frontend runs on: [https://www.mapassa.com/](https://www.mapassa.com/)
 
 ---
 
@@ -104,14 +104,11 @@ Alternatively, use services like SendGrid, Mailgun, or SMTP2Go by adjusting the 
 
 - Deploy your `/client` folder on:
   - [Vercel](https://vercel.com)
-  - [Netlify](https://netlify.com)
 
 ### Backend
 
 - Deploy your `/server` on:
   - [Render](https://render.com)
-  - [Railway](https://railway.app)
-  - [Fly.io](https://fly.io)
 
 Ensure you add the same `.env` variables in your deployment environment.
 
@@ -130,7 +127,3 @@ Ensure you add the same `.env` variables in your deployment environment.
 MIT License — feel free to use, modify, or share this project.
 
 ---
-
-## 🙋‍♂️ Contact
-
-For any business inquiries, please reach out via the form at [mapassa.com](https://mapassa.com) or email us directly at **yourbusiness@gmail.com**.

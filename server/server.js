@@ -4,9 +4,15 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 const app = express();
-// ✅ CORS setup — allow your Vercel frontend
+const allowedOrigins = ['https://www.mapassa.com', 'http://localhost:5173'];
 app.use(cors({
-  origin: 'https://www.mapassa.com',
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'));
+    }
+  },
 }));
 app.use(express.json());
 

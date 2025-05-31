@@ -68,7 +68,7 @@ export default function ContactSection() {
 
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_BASE_URL}/api/quote`,
+        'https://mapassa-catering.onrender.com/api/quote', // for local dev change to http://localhost:4000
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

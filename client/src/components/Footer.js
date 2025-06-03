@@ -58,7 +58,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="tel:+1234567890" className="hover:text-white transition">
-                📞 (346) 298-3910
+                📞 (323)906-7689
               </a>
             </li>
             {/* <li>

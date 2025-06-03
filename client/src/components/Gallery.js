@@ -4,35 +4,51 @@ import 'yet-another-react-lightbox/styles.css';
 
 const images = [
   'rice-plate.png',
-  'puff-puffs.png',
-  'gallery1.jpg',
-  'gallery2.jpg',
-  'gallery3.jpg',
-  'gallery4.jpg',
+  'puff-puff.png',
+  'casserole-dishes.jpg',
+  'buffalo-wings.jpg',
+  'beef-pilau.jpg',
+  'cooked-vegetables.jpg',
+  'fried-rice.jpg',
+  'samusa.jpg',
 ];
 
 export default function Gallery() {
   const [index, setIndex] = useState(-1);
 
-  const slides = images.map((f) => ({
-    src: `/img/${f}`,
-    title: f.replace(/[-.]/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()),
+  const slides = images.map((filename) => ({
+    src: `/img/${filename}`,
+    title: filename
+      .replace(/[-_]/g, ' ')
+      .replace(/\.\w+$/, '')
+      .replace(/\b\w/g, (char) => char.toUpperCase()),
   }));
 
   return (
-    <section id="gallery" className="py-12">
-      <h2 className="text-3xl font-bold text-center mb-8">Our Past Work</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {slides.map((s, i) => (
-          <img
-            key={i}
-            src={s.src}
-            alt={s.title}
-            className="cursor-pointer rounded shadow"
-            loading="lazy"
-            onClick={() => setIndex(i)}
-          />
-        ))}
+    <section id="gallery" className="py-20 scroll-mt-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-14">
+          Our Past Work
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {slides.map((slide, i) => (
+            <div
+              key={i}
+              className="relative overflow-hidden rounded-2xl shadow-xl group"
+            >
+              <img
+                src={slide.src}
+                alt={slide.title}
+                className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                loading="lazy"
+                onClick={() => setIndex(i)}
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-sm p-3 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {slide.title}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
       <Lightbox
         open={index >= 0}

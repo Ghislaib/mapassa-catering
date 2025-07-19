@@ -5,12 +5,12 @@ import 'yet-another-react-lightbox/styles.css';
 const images = [
   'rice-plate.png',
   'puff-puff.png',
-  'casserole-dishes.jpg',
-  'buffalo-wings.jpg',
-  'beef-pilau.jpg',
-  'cooked-vegetables.jpg',
-  'fried-rice.jpg',
-  'samusa.jpg',
+  'rice-and-beans.png',
+  'mandazi.png',
+  'yellow-rice.png',
+  'chicken.png',
+  'beans.png',
+  'sambusa.png',
 ];
 
 export default function Gallery() {
